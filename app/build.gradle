@@ -1,0 +1,26 @@
+plugins {
+    id 'com.android.application'
+    id 'com.chaquo.python'
+}
+android {
+    namespace 'com.test.scrapper'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'com.test.scrapper'
+        minSdk 26
+        targetSdk 35
+        versionCode 1
+        versionName '1.0'
+    }
+}
+chaquopy {
+    defaultConfig {
+        version = '3.11'
+        pip {
+            install 'beautifulsoup4==4.13.4'
+        }
+    }
+}
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+}
